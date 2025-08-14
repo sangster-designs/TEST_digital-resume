@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Jeremy Sangster Digital Resume</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="24fed909-1934-80ac-9267-c726bd8d7363" class="page sans"><header><img class="page-cover-image" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/JS_ID.png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/JS_logo.gif"/></div><h1 class="page-title">Jeremy Sangster Digital Resume</h1><p class="page-description"></p></header><div class="page-body"><div id="24fed909-1934-8157-9210-ce3109da53d1" class="column-list"><div id="24fed909-1934-81b3-bc1e-f1f3ee06b8aa" style="width:25%" class="column"><figure id="24fed909-1934-811f-af20-cbca32d48366" class="image"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/af68adc1-b41f-4369-bcd7-270dc1d80c16.png"><img style="width:320px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/af68adc1-b41f-4369-bcd7-270dc1d80c16.png"/></a></figure><h2 id="24fed909-1934-8133-b803-c4cb105bb851" class="block-color-default">Contact</h2><hr id="24fed909-1934-81a9-985d-ef3f97caa9d5"/><p id="24fed909-1934-81dd-9d3b-e4f515a5e441" class="">📞 <strong>229-669-1605</strong></p><p id="24fed909-1934-8189-9816-e366f332f523" class="">✉️ <strong><a href="mailto:jeremyroy0415@gmail.com">jeremyroy0415@gmail.com</a></strong></p><p id="24fed909-1934-8138-9e13-f8a71d2521a6" class="">📍 <strong>Nashville Metropolitan Area</strong></p><h2 id="24fed909-1934-8168-8717-dd60acbe5e22" class="block-color-default">Beyond Work</h2><hr id="24fed909-1934-810e-9a16-cd57ba7fa1fd"/><p id="24fed909-1934-81a4-98cb-e06653948959" class="">☕ <strong>Coffee</strong>: Chemex morning brews</p><p id="24fed909-1934-813d-9fbd-c6449bdcf64d" class="">🎬 <strong>Aging media</strong>: Rewatching past films to see what holds up</p><p id="24fed909-1934-8198-b79c-e3f4200023f6" class="">💻 <strong>Clean UX</strong>: Noticing (and fixing) digital friction</p><p id="24fed909-1934-8122-a15c-c21f99251470" class="">👨‍👩‍👧‍👦 <strong>Family life</strong>: Two kids, lots of bedtime books</p><p id="24fed909-1934-8173-861a-f271a1542a80" class="">📚 <strong>Personality</strong>: Enneagram 9 + ISFJ</p><p id="24fed909-1934-81bd-ba15-e06a472b9a86" class="">📖 <strong>Reading</strong>: Mostly nonfiction on creativity and productivity</p><p id="24fed909-1934-812b-93c7-f28ffcf5d5d6" class="">🎨 <strong>Visual design</strong>: Sketching and refining simple layouts</p></div><div id="24fed909-1934-819d-b73e-dc30bb35c8bb" style="width:75%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="24fed909-1934-8190-854d-c0f354b05902"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/briefcase_green.svg"/></div><div style="width:100%">Driven by a commitment to clarity and purposeful learning, I design leadership and professional development experiences that balance strategic thinking with practical execution. I create materials and programs that translate complex content into engaging, user-friendly formats, ensuring audiences can easily absorb and apply key concepts. Known for clear communication, structured project delivery, and thoughtful collaboration, I take pride in designing programs and materials that support leaders’ growth while aligning with organizational goals.</div></figure><h1 id="24fed909-1934-810b-af1a-fea078d877c4" class="">Professional Experience</h1><hr id="24fed909-1934-8131-89cf-ebe3b4f4144b"/><div id="24fed909-1934-81e1-808c-fb190cfe7903" class="column-list"><div id="24fed909-1934-8114-81c6-ec363201c1ca" style="width:12.5%" class="column"><figure id="24fed909-1934-81db-b34f-efa4cfcac2a2" class="image"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/fe7d3742-2915-4126-932f-53b786aaf54a.png"><img style="width:1476.923076923077px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/fe7d3742-2915-4126-932f-53b786aaf54a.png"/></a></figure><p id="24fed909-1934-816c-8c44-c41fdf208a28" class="">
+</p></div><div id="24fed909-1934-8152-8032-d5683fafa405" style="width:87.5%" class="column"><p id="24fed909-1934-819b-a71b-e533e18ed00a" class=""><strong>Learning Designer</strong></p><p id="24fed909-1934-8156-93d4-f67446be486f" class=""><em>Rasmussen University</em></p><p id="24fed909-1934-816d-9897-ee82b60e4d5e" class=""><em><mark class="highlight-gray">Nov 2024 – Present</mark></em></p><ul id="24fed909-1934-8080-8f25-f6db92907948" class="bulleted-list"><li style="list-style-type:disc">Develop leadership and professional development materials that translate complex content into clear, actionable guidance.</li></ul><ul id="24fed909-1934-8049-bf2f-ca79839b806a" class="bulleted-list"><li style="list-style-type:disc">Design slide decks, participant guides, and interactive content to support structured learning programs.</li></ul><ul id="24fed909-1934-80d3-9f98-f1f181da5629" class="bulleted-list"><li style="list-style-type:disc">Collaborate with subject matter experts and stakeholders to ensure alignment with program goals and audience needs.</li></ul><ul id="24fed909-1934-8014-8a37-c0f7d21f8897" class="bulleted-list"><li style="list-style-type:disc">Apply instructional best practices and data-driven insights to refine materials and program flow.</li></ul><ul id="24fed909-1934-80bf-852c-fb1d6e238163" class="bulleted-list"><li style="list-style-type:disc">Manage multiple concurrent projects while maintaining schedules, deadlines, and content organization standards.</li></ul><p id="24fed909-1934-81a5-b0f8-e0e088ccd4c2" class="">
+</p></div></div><div id="24fed909-1934-81f8-8a85-d7595d5eac23" class="column-list"><div id="24fed909-1934-813c-9383-c596815d6f12" style="width:12.5%" class="column"><figure id="24fed909-1934-8123-b08b-de23d4c5bca3" class="image"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/9140e789-8297-4fc9-be9a-21e72936fb4e.png"><img style="width:1406.017699115044px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/9140e789-8297-4fc9-be9a-21e72936fb4e.png"/></a></figure></div><div id="24fed909-1934-814e-9835-ceab3319c027" style="width:87.5%" class="column"><p id="24fed909-1934-816f-84de-f900ef3d479a" class=""><strong>Instructor &amp; Learning Experience Facilitator</strong></p><p id="24fed909-1934-81ee-a158-c192d5962bf2" class=""><em>Stride, Inc.</em></p><p id="24fed909-1934-8102-94b3-f82a0508399f" class=""><em><mark class="highlight-gray">Nov 2020 – Oct 2024</mark></em></p><ul id="24fed909-1934-8003-b1e6-cf618e00cdaa" class="bulleted-list"><li style="list-style-type:disc">Customized and implemented digital content and program materials to enhance clarity and engagement for adult learners.</li></ul><ul id="24fed909-1934-80e3-b5b7-dc3132fe701f" class="bulleted-list"><li style="list-style-type:disc">Facilitated structured virtual sessions for cohorts of 150+ learners, providing professional guidance and feedback.</li></ul><ul id="24fed909-1934-8038-bdc7-d71051dc9958" class="bulleted-list"><li style="list-style-type:disc">Designed participant-facing templates and communication materials, maintaining consistent tone and formatting.</li></ul><ul id="24fed909-1934-801a-8f49-eefa72254bd7" class="bulleted-list"><li style="list-style-type:disc">Collaborated with peers in planning and execution meetings to align content with program objectives.</li></ul></div></div><div id="24fed909-1934-81c3-9f66-cd099fa53df4" class="column-list"><div id="24fed909-1934-817a-8b4f-dc2b0df53a23" style="width:12.5%" class="column"><figure id="24fed909-1934-81c4-a1d4-e1a8d65c2f22" class="image"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/9c830269-8a3b-4542-a70b-93cba8ca5cf5.png"><img style="width:935.159817351598px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/9c830269-8a3b-4542-a70b-93cba8ca5cf5.png"/></a></figure></div><div id="24fed909-1934-8178-92a1-c599457e4603" style="width:87.5%" class="column"><p id="24fed909-1934-8127-bf9c-e663e2cb341f" class=""><strong>Instructional Designer &amp; LMS Migration Specialist</strong></p><p id="24fed909-1934-8181-af86-c5103bdc8702" class=""><em>North Central University</em></p><p id="24fed909-1934-8153-93b6-ccc990811d13" class=""><em><mark class="highlight-gray">Aug 2022 – Jun 2023</mark></em></p><ul id="24fed909-1934-80a8-ae01-c17b7cff4e27" class="bulleted-list"><li style="list-style-type:disc">Transferred and restructured content for over 50 courses while maintaining consistent program and visual standards.</li></ul><ul id="24fed909-1934-8029-bbcf-e6cdfa6044bc" class="bulleted-list"><li style="list-style-type:disc">Conducted QA reviews to resolve formatting and flow issues, improving overall usability and learner comprehension.</li></ul><ul id="24fed909-1934-80a7-9a29-d26819dcfbd3" class="bulleted-list"><li style="list-style-type:disc">Created and maintained over 400 course blueprints supporting scalable program development and instructional alignment.</li></ul><ul id="24fed909-1934-80af-a66f-c42c74713452" class="bulleted-list"><li style="list-style-type:disc">Tracked deliverables and coordinated stakeholders via project management tools like Airtable and Confluence.</li></ul></div></div><div id="24fed909-1934-8123-a95c-f093cd13d23b" class="column-list"><div id="24fed909-1934-8144-a253-de835e50ff0a" style="width:12.5%" class="column"><figure id="24fed909-1934-81d6-9912-e9b16f16ed69" class="image"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/images-1.png"><img style="width:82.46875px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/images-1.png"/></a></figure></div><div id="24fed909-1934-81d8-913c-edf6f38b2aba" style="width:87.5%" class="column"><p id="24fed909-1934-81bf-b762-ec52958027c4" class=""><strong>Lead Instructional Designer &amp; Learning Team Manager</strong></p><p id="24fed909-1934-81ed-8e09-c3bf311039ab" class=""><em>Georgia Cyber Academy</em></p><p id="24fed909-1934-81b9-a7a8-e0860af680bb" class=""><em><mark class="highlight-gray">Jul 2018 – Oct 2020</mark></em></p><ul id="24fed909-1934-80f1-88ee-ff63426be04a" class="bulleted-list"><li style="list-style-type:disc">Led a team of seven instructors, developing shared materials, assessments, and templates aligned to leadership and professional development goals.</li></ul><ul id="24fed909-1934-80b7-b9f6-e6e21e202e79" class="bulleted-list"><li style="list-style-type:disc">Designed and deployed supplemental content, supporting measurable growth across learner groups.</li></ul><ul id="24fed909-1934-80a7-99dc-fc262cb850fa" class="bulleted-list"><li style="list-style-type:disc">Facilitated bi-weekly collaborative meetings, contributing to program design and alignment discussions.</li></ul><ul id="24fed909-1934-80ca-af97-c8c6d9006de7" class="bulleted-list"><li style="list-style-type:disc">Refined pacing, sequence, and materials based on participant data and feedback.</li></ul></div></div><div id="24fed909-1934-813a-bff5-d7d9b936ed1b" class="column-list"><div id="24fed909-1934-81e4-b859-ce153afddc49" style="width:12.5%" class="column"><figure id="24fed909-1934-81ba-ae60-f23624881664" class="image"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/images-2.png"><img style="width:300.9375px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/images-2.png"/></a></figure></div><div id="24fed909-1934-81c0-b712-fd350310df24" style="width:87.5%" class="column"><p id="24fed909-1934-8135-bb5c-f7e5ee8ac520" class=""><strong>Curriculum-Embedded Instructor</strong></p><p id="24fed909-1934-8174-a6db-f3d5e4044da8" class=""><em>Scintilla Charter Academy</em></p><p id="24fed909-1934-81b7-b121-e9d02c4b1c45" class=""><em><mark class="highlight-gray">Aug 2015 – Jun 2018</mark></em></p><ul id="24fed909-1934-8048-9d49-f9a97e72d239" class="bulleted-list"><li style="list-style-type:disc">Created instructional materials, visual aids, and slide decks to enhance comprehension and engagement.</li></ul><ul id="24fed909-1934-8020-a578-ef2b6fa61bd1" class="bulleted-list"><li style="list-style-type:disc">Adapted and aligned lessons and assessments to support adult and student learning needs.</li></ul><ul id="24fed909-1934-808d-9ba0-fc0e345d01b2" class="bulleted-list"><li style="list-style-type:disc">Collaborated on curriculum alignment initiatives and contributed feedback for program refinement.</li></ul></div></div><h1 id="24fed909-1934-81eb-86e8-dd37d5ad1d56" class="">Education</h1><hr id="24fed909-1934-81f4-9cfc-ece2f084a3fa"/><div id="24fed909-1934-8118-8a2e-d48313e725a3" class="column-list"><div id="24fed909-1934-8156-88ad-ebf1b9830f98" style="width:12.5%" class="column"><figure id="24fed909-1934-8196-ae19-cbac3029ed2a" class="image"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/images-3.png"><img style="width:148.921875px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/images-3.png"/></a></figure></div><div id="24fed909-1934-81b4-8ecc-e37dbe92e9d0" style="width:87.5%" class="column"><p id="24fed909-1934-8160-a224-c82bb923f281" class=""><strong>BS Biology</strong></p><p id="24fed909-1934-81a5-99f0-c476186c32b4" class=""><em>Valdosta State University</em></p><p id="24fed909-1934-8175-8ece-cdce24c094e8" class=""><em><mark class="highlight-gray">Aug 2009 - May 2014</mark></em></p></div></div><div id="24fed909-1934-81ca-bfc2-c6dfc56dd9a1" class="column-list"><div id="24fed909-1934-8130-a65a-c34a924ebab4" style="width:12.5%" class="column"><figure id="24fed909-1934-810c-9267-ed17bbbfa667" class="image"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/images-4.png"><img style="width:82.46875px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/images-4.png"/></a></figure></div><div id="24fed909-1934-8192-9228-d44d62866dc8" style="width:87.5%" class="column"><p id="24fed909-1934-8185-893d-d009e2d3ab98" class=""><strong>MA Teaching</strong></p><p id="24fed909-1934-81fa-aaa9-c7e901c94db6" class=""><em>Valdosta State University Graduate School</em></p><p id="24fed909-1934-8121-8c65-e59bb3e0ef0b" class=""><em><mark class="highlight-gray">Jun 2014 - Aug 2015</mark></em></p></div></div><h1 id="24fed909-1934-8164-87df-de6b971e2f32" class="block-color-default">Projects</h1><hr id="24fed909-1934-8143-a8ba-f6d553a67fc6"/><div id="24fed909-1934-8199-8e49-f8921c343581" class="collection-content"><h4 class="collection-title">Projects</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><div data-testid="/icons/font_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/font_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/font_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Name</th><th><span class="icon property-icon"><div data-testid="/icons/calendar_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/calendar_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/calendar_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Date</th><th><span class="icon property-icon"><div data-testid="/icons/description_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/description_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/description_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Description</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/kind_gray.svg" style="width:14px;height:14px;display:block"/></span>Tags</th><th><span class="icon property-icon"><div data-testid="/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/arrow-circle-down_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/arrow-circle-down_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Title</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/art_gray.svg" style="width:14px;height:14px;display:block"/></span>Visual Highlights</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/cursor-button_gray.svg" style="width:14px;height:14px;display:block"/></span>Website</th></tr></thead><tbody><tr id="24fed909-1934-8118-8b37-cc033ba9dbbd"><td class="cell-title"><a href="https://www.notion.so/E-Learning-Course-24fed909193481188b37cc033ba9dbbd?pvs=21"><img class="icon" src="https://www.notion.so/icons/grid-dense_gray.svg"/>E-Learning Course</a></td><td class="cell-X[IH"><time>@July 1, 2025</time></td><td class="cell-p\Ud">I designed and developed this interactive e-learning experience using Articulate Rise 360. The course explores personal workflow and sustainable productivity through a modular format focused on clarity, flexibility, and user relevance. All content is original, based on my real-world systems and philosophy, and presented through a fictionalized lens to illustrate soft efficiency principles without proprietary constraints.</td><td class="cell-V[wZ"><span class="selected-value select-value-color-blue">E-Learning</span><span class="selected-value select-value-color-purple">Instructional Design</span><span class="selected-value select-value-color-gray">Rise 360</span><span class="selected-value select-value-color-brown">UX Writing</span></td><td class="cell-=mDT"><span class="selected-value select-value-color-gray">&quot;Identify Your Natural Flow&quot;</span></td><td class="cell-ZD|M"><span style="margin-inline-end:6px"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/Projects%2024fed909193481998e49f8921c343581/E-Learning%20Course%2024fed909193481188b37cc033ba9dbbd/Screenshot_2025-08-14_at_8.53.07_AM.png"><img style="width:20px;max-height:24px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/Projects%2024fed909193481998e49f8921c343581/E-Learning%20Course%2024fed909193481188b37cc033ba9dbbd/Screenshot_2025-08-14_at_8.53.07_AM.png" alt="Screenshot 2025-08-14 at 8.53.07 AM.png"/></a></span><span style="margin-inline-end:6px"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/Projects%2024fed909193481998e49f8921c343581/E-Learning%20Course%2024fed909193481188b37cc033ba9dbbd/Screenshot_2025-08-14_at_8.53.17_AM.png"><img style="width:20px;max-height:24px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/Projects%2024fed909193481998e49f8921c343581/E-Learning%20Course%2024fed909193481188b37cc033ba9dbbd/Screenshot_2025-08-14_at_8.53.17_AM.png" alt="Screenshot 2025-08-14 at 8.53.17 AM.png"/></a></span><span style="margin-inline-end:6px"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/Projects%2024fed909193481998e49f8921c343581/E-Learning%20Course%2024fed909193481188b37cc033ba9dbbd/Screenshot_2025-08-14_at_8.53.32_AM.png"><img style="width:20px;max-height:24px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/Projects%2024fed909193481998e49f8921c343581/E-Learning%20Course%2024fed909193481188b37cc033ba9dbbd/Screenshot_2025-08-14_at_8.53.32_AM.png" alt="Screenshot 2025-08-14 at 8.53.32 AM.png"/></a></span><span style="margin-inline-end:6px"><a href="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/Projects%2024fed909193481998e49f8921c343581/E-Learning%20Course%2024fed909193481188b37cc033ba9dbbd/Screenshot_2025-08-14_at_8.53.56_AM.png"><img style="width:20px;max-height:24px" src="Jeremy%20Sangster%20Digital%20Resume%2024fed909193480ac9267c726bd8d7363/Projects%2024fed909193481998e49f8921c343581/E-Learning%20Course%2024fed909193481188b37cc033ba9dbbd/Screenshot_2025-08-14_at_8.53.56_AM.png" alt="Screenshot 2025-08-14 at 8.53.56 AM.png"/></a></span></td><td class="cell-:P]C"><span class="selected-value select-value-color-yellow">https://sangster-designs.github.io/eLearning-Course-Sample/</span></td></tr></tbody></table><br/><br/></div><h1 id="24fed909-1934-81aa-98f9-c5697cbb2d0b" class="block-color-default">Skills</h1><hr id="24fed909-1934-8195-bdf2-f3f336591d8e"/><div id="24fed909-1934-81b6-a468-e89fe6fba868" class="collection-content"><h4 class="collection-title">Skills (1)</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><div data-testid="/icons/font_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/font_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/font_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Skill</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/kind_gray.svg" style="width:14px;height:14px;display:block"/></span>Type</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/stairs_gray.svg" style="width:14px;height:14px;display:block"/></span>Skill Level</th></tr></thead><tbody><tr id="24fed909-1934-8174-97c2-dcee1d0e8df8"><td class="cell-title"><a href="https://www.notion.so/Attention-to-Detail-24fed9091934817497c2dcee1d0e8df8?pvs=21"><img class="icon" src="https://www.notion.so/icons/info-alternate_blue.svg"/>Attention to Detail</a></td><td class="cell-a&gt;JK"></td><td class="cell-Ml?D"></td></tr><tr id="24fed909-1934-8191-a812-d80fca7a8395"><td class="cell-title"><a href="https://www.notion.so/Collaboration-24fed90919348191a812d80fca7a8395?pvs=21"><img class="icon" src="https://www.notion.so/icons/meeting_lightgray.svg"/>Collaboration</a></td><td class="cell-a&gt;JK"></td><td class="cell-Ml?D"></td></tr><tr id="24fed909-1934-813f-abdf-c58a959642c7"><td class="cell-title"><a href="https://www.notion.so/Project-Management-24fed9091934813fabdfc58a959642c7?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_blue.svg"/>Project Management</a></td><td class="cell-a&gt;JK"></td><td class="cell-Ml?D"></td></tr><tr id="24fed909-1934-81a3-b209-fd5512978ab6"><td class="cell-title"><a href="https://www.notion.so/Graphic-Design-24fed909193481a3b209fd5512978ab6?pvs=21"><img class="icon" src="https://www.notion.so/icons/color-palette_purple.svg"/>Graphic Design</a></td><td class="cell-a&gt;JK"></td><td class="cell-Ml?D"></td></tr><tr id="24fed909-1934-810c-8cc3-c8bd1169679c"><td class="cell-title"><a href="https://www.notion.so/Needs-Analysis-24fed9091934810c8cc3c8bd1169679c?pvs=21"><img class="icon" src="https://www.notion.so/icons/chart-line_orange.svg"/>Needs Analysis</a></td><td class="cell-a&gt;JK"></td><td class="cell-Ml?D"></td></tr><tr id="24fed909-1934-8148-a5e6-f4c66e1c84a5"><td class="cell-title"><a href="https://www.notion.so/Communication-24fed90919348148a5e6f4c66e1c84a5?pvs=21"><img class="icon" src="https://www.notion.so/icons/conversation_green.svg"/>Communication</a></td><td class="cell-a&gt;JK"></td><td class="cell-Ml?D"></td></tr></tbody></table><br/><br/></div><div id="24fed909-1934-81a1-8ebe-f200a8a59a51" class="collection-content"><h4 class="collection-title">Skills</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><div data-testid="/icons/font_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/font_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/font_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Skill</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/kind_gray.svg" style="width:14px;height:14px;display:block"/></span>Type</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/stairs_gray.svg" style="width:14px;height:14px;display:block"/></span>Skill Level</th></tr></thead><tbody><tr id="24fed909-1934-81fb-ad72-f34a3f2ce2e5"><td class="cell-title"><a href="https://www.notion.so/Canva-Pro-24fed909193481fbad72f34a3f2ce2e5?pvs=21"><img class="icon" src="https://www.applivery.com/wp-content/uploads/2024/07/Canva.png"/>Canva Pro</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Design Tool</span></td><td class="cell-Ml?D">95%</td></tr><tr id="24fed909-1934-8138-bea8-e767700eab46"><td class="cell-title"><a href="https://www.notion.so/Articulate-360-24fed90919348138bea8e767700eab46?pvs=21"><img class="icon" src="https://tiiny.host/blog/assets/images/18d01a97-9e61-406a-8c98-a1e98474b26f.png"/>Articulate 360</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Course Authoring Tool</span></td><td class="cell-Ml?D">80%</td></tr><tr id="24fed909-1934-812e-9a80-d08c19f30666"><td class="cell-title"><a href="https://www.notion.so/MS-Office-24fed9091934812e9a80d08c19f30666?pvs=21"><img class="icon" src="https://i.pinimg.com/564x/f7/99/df/f799dfe6a4cef79463de4e96d15b8f67.jpg"/>MS Office</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Application Software</span></td><td class="cell-Ml?D">95%</td></tr><tr id="24fed909-1934-81ab-8afb-feefafd1143c"><td class="cell-title"><a href="https://www.notion.so/Adobe-CS-24fed909193481ab8afbfeefafd1143c?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Creative_Suite_icon.svg/1200px-Adobe_Creative_Suite_icon.svg.png"/>Adobe CS</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Design Tool</span></td><td class="cell-Ml?D">75%</td></tr><tr id="24fed909-1934-81ce-97ff-eefeebe043ff"><td class="cell-title"><a href="https://www.notion.so/Blackboard-Learn-Ultra-24fed909193481ce97ffeefeebe043ff?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/7/77/Blackboard_Inc._logo.png"/>Blackboard Learn Ultra</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Learning Management System</span></td><td class="cell-Ml?D">90%</td></tr><tr id="24fed909-1934-8108-b31a-c624770827d7"><td class="cell-title"><a href="https://www.notion.so/BrightSpace-by-D2L-24fed90919348108b31ac624770827d7?pvs=21"><img class="icon" src="https://avatars.githubusercontent.com/u/5429170?s=200&amp;v=4"/>BrightSpace by D2L</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Learning Management System</span></td><td class="cell-Ml?D">95%</td></tr><tr id="24fed909-1934-8178-98d8-c6117259625c"><td class="cell-title"><a href="https://www.notion.so/Canvas-24fed9091934817898d8c6117259625c?pvs=21"><img class="icon" src="https://oaiplus.pdx.edu/wp-content/uploads/2023/04/img.icons8_.png"/>Canvas</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Learning Management System</span></td><td class="cell-Ml?D">90%</td></tr><tr id="24fed909-1934-81fe-9f90-f2f2e4720430"><td class="cell-title"><a href="https://www.notion.so/Milanote-24fed909193481fe9f90f2f2e4720430?pvs=21"><img class="icon" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_6b0048432fd2f3684b090699da6ae61f/milanote.png"/>Milanote</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Project Management</span></td><td class="cell-Ml?D">95%</td></tr><tr id="24fed909-1934-8191-9041-edab6bbf0424"><td class="cell-title"><a href="https://www.notion.so/D-iD-24fed909193481919041edab6bbf0424?pvs=21"><img class="icon" src="https://store-images.s-microsoft.com/image/apps.14149.c8f516f7-dbdc-4715-ae3a-9b2bf724f9df.2de95117-04a6-4beb-9c02-1a60022467fc.2ab7a726-6296-455a-baea-6b2f0a2bcf3a"/>D-iD</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Animation</span></td><td class="cell-Ml?D">90%</td></tr><tr id="24fed909-1934-8106-987a-d1716ac3ea6a"><td class="cell-title"><a href="https://www.notion.so/Notion-24fed90919348106987ad1716ac3ea6a?pvs=21"><img class="icon" src="https://www.notion.so/icons/notion_gray.svg"/>Notion</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Project Management</span></td><td class="cell-Ml?D">60%</td></tr><tr id="24fed909-1934-815f-9cb9-f79aa510d8c8"><td class="cell-title"><a href="https://www.notion.so/Moodle-24fed9091934815f9cb9f79aa510d8c8?pvs=21"><img class="icon" src="https://img.icons8.com/?size=512&amp;id=39910&amp;format=png"/>Moodle</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Learning Management System</span></td><td class="cell-Ml?D">80%</td></tr><tr id="24fed909-1934-81c4-9b38-c31c82f98c5b"><td class="cell-title"><a href="https://www.notion.so/Wix-com-24fed909193481c49b38c31c82f98c5b?pvs=21"><img class="icon" src="https://images.icon-icons.com/2699/PNG/512/wix_logo_icon_168759.png"/>Wix.com</a></td><td class="cell-a&gt;JK"><span class="selected-value select-value-color-gray">Website Builder</span></td><td class="cell-Ml?D">75%</td></tr></tbody></table><br/><br/></div></div></div><p id="24fed909-1934-81a3-b42f-ef4a82364829" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
